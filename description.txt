@@ -1,0 +1,22 @@
+c1: Snow Crab Legs, We steam our wild-caught snow crab legs and serve them with your choice of two sides, extra cluster
+sh1: Garlic-Grilled Shrimp, A skewer of shrimp brushed with a buttery garlic glaze for extra flavor,
+sh2: Shrimp Linguini Alfredo, Tender shrimp in our famous creamy garlic Parmesan sauce, served over linguini, extra shrimp
+lob1: Rock Lobster Tail, Wild-caught Caribbean lobster wood-grilled to perfection by our Certified Grill Masters, sides brown rice, sides eggs, extra lobster tail
+p1: Chicken & Wild Rice Soup; Long grain and wild rice, celery, onions, carrots and diced chicken simmered in chicken broth.
+p2: Bread Cheddar Soup; Chopped bread shredded carrots and select seasonings simmered in a velvety smooth cheese sauce
+p3: Vegetarian Creamy Tomato Soup; Vine-ripened pear tomatoes pureed with fresh cream for a velvety smooth flavor accented by hints of red pepper 
+p4: Baked Potato Soup; Home-style cuts of russet potatoes simmered with select seasonings and smoked bacon in a rich cream sauce flavored 
+p5: Turkey Chili; Hearty blend of dark meat turkey raised without antibiotics and tender beans, slow cooked with veggies and spices
+sa1: Oriental Chicken Salad; Fresh Asian greens tossed in a tasty Oriental vinaigrette and topped with crispy noodles, toasted almonds and golden fried chicken.
+sa2: Grilled Chicken Caesar Salad; Juicy grilled chicken breast over crisp romaine tossed in our garlic Caesar dressing. Topped with challah croutons and our Parmesan cheese blend.
+sa3: Thai Shrimp Salad; Edamame, almonds and an oriental salad blend are tossed in a chili lime vinaigrette and topped with juicy shrimp, wonton strips, peanut sauce and fresh cilantro.
+sa4: Southwestern Steak Salad; Mixed greens, top sirloin with chimichurri, corn & black bean salsa, cheddar and crispy tortilla strips with a creamy house-made cilantro ranch dressing.
+burgers: https://www.bkdelivers.com/
+z1: fries
+z2: country vegetable plate
+z3: mashed potatoes
+z6: fried apples
+de1: Apple Pie; American Apple Pie served with no sugar added Premium Vanilla Ice Cream
+de2: Fruit Cobbler with Ice Cream; We bake our fruit cobblers daily and serve them warm. Each classic cobbler is filled with blackberries and topped with Vanilla Ice Cream
+de3: Baked Apple Dumplin; Covered with Pecan Streusel and Premium Vanilla Bean Ice Cream n' Apple Topping
+de4: Double Chocolate Fudge coke cake; We make it daily, by hand, and serve it warm with rich, creamy vanilla ice cream.

@@ -1,0 +1,266 @@
+<html>
+<head>
+    <link rel="stylesheet" href="project.css">
+    <script src = "js/jquery-3.2.1.js"></script>
+    <script src = "js/project.js"></script>
+    <script src = "js/jsonDEMO2.js"></script>
+	<title>COMP: 3020 Project</title>
+    </head>   
+    <body>
+    
+   <!------------------------------ TOP HEADER --------------------------------->
+        <div class="warp">
+    
+            <div class="top">
+                <input type="text" id="searchbar" class="search" name="search" placeholder="Search..">
+            </div>
+
+            <div class="top">
+                <p class="Rheader">Rony Toma's Grill & Bar</p>
+            </div>
+
+            <div class="top">
+                <button type="button" class="assistButton" id="ASSIST_BUTTON">Request Assistance</button>
+            </div>
+
+        </div> 
+
+   <!------------------------------ WELCOME PAGE --------------------------------->
+        <div id="welcomepage">
+            <div class ="setTable" id=settable>
+                <p id = "instruction">Please add your diners</p>
+                <div class="dinercontainer">
+                    <div class="seats" id=s1></div>
+                    <div class="seats" id=s2></div>
+                </div>
+                <div class="dinercontainer2">
+                    <div class="seats" id=s3></div>
+                    <div class="seats" id=s4></div>
+                </div>
+                <div id="eventicon1" class = "eventicon1">
+                    <div class = "outericon">
+                        <div class = "maskicon">
+                            <div class = "ring"></div>
+                        </div>
+                    </div>
+                    <div id="plussign">+</div>
+                </div>    
+                <div id="eventicon2" class = "eventicon2">
+                    <div class = "outericon">
+                        <div class = "maskicon">
+                            <div class = "ring"></div>
+                        </div>
+                    </div>
+                    <div id="playsign"></div>
+                </div>
+            </div>
+            <div id="enterdinnernum" class="enterdinernum">
+                <div class="enternummsg">
+                    <p>How many people are dining?</p>
+                </div>
+                <div class="enternummsg">
+                    <select id="numdiner">
+                        <option value="" disabled="disabled" selected="selected">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+            <div id="fade" class="blackoverlay"></div>
+        </div>
+<!------------------------------------------------------------------------------------------------------------->    
+<!--------------------------------------------- MAIN SCREEN ---------------------------------------------------> 
+<!-------------------------------------------------------------------------------------------------------------> 
+    
+    
+
+
+        <div class="mainMenu" id="mainpage">
+    <!------------------------------ ORDER lIST --------------------------------->
+            <div class="mainMenu" id=orderList>
+                <div class="left-top">
+                    <div class="orderAndAddButton">
+                        <p style="margin:0;">Your Order</p>
+                    </div>
+                    <div class="orderAndAddButton">
+                        <button class="addDinerButton">add a diner</button>
+                    </div>
+                </div>
+                <div class="diners">
+                    <div class="diner">
+                        <div class="dinerName" id="dinerName1"></div>
+
+                        
+                        <div class="dinerOrder" id=itemList1></div>
+                        <div class="editRemoveButton">
+                            <button class="editButton">Edit</button>
+                        </div>
+                        <div class="editRemoveButton">
+                            <button class="removeButton" onclick="remove()">Remove</button>
+                            <span class="removeicon"></span>
+                        </div>
+                    </div>
+                    <div class="diner">
+                        <div class="dinerName" id="dinerName2">
+                            
+                        </div>
+
+                        <div class="dinerOrder" id=itemList2></div>
+
+                        <div class="editRemoveButton">
+                            <button class="editButton">Edit</button>
+                        </div>
+                        <div class="editRemoveButton">
+                            <button class="removeButton" onclick="remove()">Remove</button>
+                        </div>
+                    </div>
+                    <div class="diner">
+                        <div class="dinerName" id="dinerName3">
+                            
+                        </div>
+
+                        <div class="dinerOrder" id=itemList3></div>
+
+                        <div class="editRemoveButton">
+                            <button class="editButton">Edit</button>
+                        </div>
+                        <div class="editRemoveButton">
+                            <button class="removeButton" onclick="remove()">Remove</button>
+                        </div>
+                    </div>
+                    <div class="diner">
+                        <div class="dinerName" id="dinerName4">
+                            
+                        </div>
+
+                        <div class="dinerOrder" id=itemList4></div>
+
+                        <div class="editRemoveButton">
+                            <button class="editButton">Edit</button>
+                        </div>
+                        <div class="editRemoveButton">
+                            <button class="removeButton" onclick="remove()">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-bottom">
+                    <button a href="#" class="placeOrderButton">Place Order</button>
+                </div>
+            </div>
+
+    <!------------------------------ CATRGORY --------------------------------->
+            <div class="mainMenu" id=category>
+                <nav class="navigation">
+                    <ul class="maincat">
+                        <hr class="separateline">
+                        <li><a class="cat" href="">Drink</a>
+                            <ul class="submenu">
+                                <li><button class ="submenuB" onclick="fillorder('BALUARTE ROBLE','$10.99','An absolute cracker, we think just about the best value for money red wine we have ever tasted.','w1.png');">Alcoholic</button></li>
+                
+                                <li><button class ="submenuB" onclick="fillorder('Fruitopia','$1.99','FILTERED WATER, FRUIT JUICES FROM CONCENTRATE (PEAR, PASSIONFRUIT, APPLE AND STRAWBERRY), NATURAL FLAVOUR','d5.png');">Soft Drink</button></li>
+                                <li><button class ="submenuB" onclick="fillorder('Juice','$1.99','Juice is a beverage made from the extraction or pressing out of the natural liquid contained in fruit and vegetables','d7.png');">Juice</button></li>
+                            </ul>
+                        </li>
+                        <hr class="separateline">
+                        <li><a class="cat" href="">Appetizers</a>
+                            <ul class="submenu">
+                                <li><button class ="submenuB" onclick="fillorder('Bread Sticks','$4.99','There are few things better in life than warm, soft, buttery bread fresh out of the oven. Here is the best bread stick','s2.jpg');">Bread</button></li>
+                                <li><button class ="submenuB" onclick="fillorder('Pickle Chips','$3.99','This is Crispy golden brown pickle rounds, served with ranch dressing and chipotle aioli.Come and enjoy!','s5.png');">Pickeled</button></li>
+                                <li><button class ="submenuB" onclick="fillorder('Caesar Salad','$6.99','Including crisp romaine lettuce, creamy Caesar dressing, herbed croutons and Parmesan cheese.','sa2.jpg');">Salad</button></li>
+                                <li><button class ="submenuB" onclick="fillorder('Turkey Chili','$5.99','Hearty blend of dark meat turkey raised without antibiotics and tender beans, slow cooked with veggies and spices','p5.jpg');">Soups</button></li>
+                            </ul>
+                        </li>
+                        <hr class="separateline">
+                        <li><a class="cat" href="">Entrées</a>
+                            <ul class="submenu">
+                                <li><button class ="submenuB" onclick="fillorder('chipotle firecracker hamburger','$7.99','It’s our juicy Beef Burger, topped with bacon, crispy Cajun onions, lettuce, melted cheese and crispy jalapeños.','b1.jpg');">Burger</button></li>
+                                <li><button class ="submenuB" onclick="fillorder('Snow Crab Legs','$6.49','We steam our wild-caught snow crab legs and serve them with your choice of two sides','c1.jpg');">Seafood</button></li>
+                                <li><button class ="submenuB" onclick="fillorder('Rib Eye Steak','$3.99','Seasoned and seared to juicy perfection. Served with a signature potato and choice of one freshly made side.','st3.png');">Steak</button></li>
+                                <li><button class ="submenuB" onclick="fillorder('Chicken Wings','3.99','Seasoned and seared to juicy perfection. Served with a signature potato and choice of one freshly made side.','g1.jpg');">Wings</button></li>
+                            </ul>
+                        </li>
+                        <hr class="separateline">
+                        <li><a class="cat" href="">Desert</a>
+                            <ul class="submenu">
+                                <li><button class ="submenuB" onclick="fillorder('Fruit Cobbler with Ice Cream','$3.99','We bake our fruit cobblers daily and serve them warm. Each classic cobbler is filled with blackberries and topped with Ice Cream','de2.jpg');">Sundae</button></li>
+                                <li><button class ="submenuB" onclick="fillorder('Apple Pie','$3.99','This is American Apple Pie served with no sugar added Premium Vanilla Ice Cream, we made it daily and fresh ','de1.jpg');">Pie</button></li>
+                                <li><button class ="submenuB" onclick="fillorder('Double Chocolate Fudge coke cake','$3.99','We make it daily, by hand, and serve it warm with rich, creamy vanilla ice cream. And filled with blackberries ','de4.jpg');">Hot Fudge</button></li>
+                                <li><button class ="submenuB" onclick="fillorder('Baked Apple Dumplin','$3.99','Covered with Pecan Streusel and Premium Vanilla Bean Ice Cream and Apple Topping with fresh make yougort.','de3.jpg');">Donuts</button></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>	
+            <script>
+                
+            </script>
+    <!------------------------------ DESCRIPTION --------------------------------->
+            <div class="mainMenu" id=description>
+                <div class = "largeImage">
+                    <img src="b1.jpg" class= "largeImage" id ="bigImage" alt="chipotle firecracker hamburger">
+                </div>
+                <div class="textheader">
+                    <p  id="textheaders" style="margin-top:0.2em; margin-bottom:0.2em;"></p>
+                </div>
+                <div class="textdescription" >
+                    <p id="textdescriptions" style="margin-top:0.2em; margin-bottom:0.2em;">It’s our juicy Beef Burger, topped with bacon, crispy Cajun onions, lettuce, melted cheese and crispy jalapeños.</p>
+                </div>
+                <div class="sidespart">
+                    <div class ="sides">
+                        <p style="margin-top:0; margin-bottom:0;">
+                            Sides:
+                        </p>
+                    </div>
+                    <div class="sides">
+                        <div id="sdd" class="sides-dropdown" tabindex="1">
+                            <span>None</span>
+                            <ul class="dropdown">  
+                                <li><a href="#">None</a></li>
+                                <li><a href="#">Fries</a></li>
+                                <li><a href="#">Mashed Potatoes</a></li>
+                            </ul>
+                        </div>
+
+                    </div>            
+                </div>
+                <div class="extrapart">
+                    <div class ="extra">
+                        <p style="margin-top:0; margin-bottom:0;">
+                            Extra:
+                        </p>
+                    </div>
+                    <div class="extra">
+                        <div id="edd" class="sides-dropdown" tabindex="1">
+                            <span>None</span>
+                            <ul class="dropdown">  
+                                <li><a href="#">None</a></li>
+                                <li><a href="#">Bacon</a></li>
+                                <li><a href="#">Chesse</a></li>
+                            </ul>
+                        </div>   
+
+
+                    </div>
+                </div>
+                <div class="right-bottom">
+                    <div class="priceAndOrder">
+                        <p class="price" id="itemprice">$7.99</p>
+                    </div>
+                    <div class="priceAndOrder">
+                        <button class="orderButton" id="orderButton">ORDER</button>
+                    </div>
+                    <div class="forwhom" id="forwhom">
+                        <button class="forwho" id="for1" onclick = "addCart1(selectItemN,selectItemP),toggle()"></button>
+                        <button class="forwho" id="for2" onclick = "addCart2(selectItemN,selectItemP),toggle()"></button>
+                        <button class="forwho" id="for3" onclick = "addCart3(selectItemN,selectItemP),toggle()"></button>
+                        <button class="forwho" id="for4" onclick = "addCart4(selectItemN,selectItemP),toggle()"></button>
+                    </div>
+                </div>
+
+            </div>	
+
+        </div>
+    </body>
+</html>

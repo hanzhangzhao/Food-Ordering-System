@@ -1,0 +1,951 @@
+body{
+	height: 719px;
+    width: auto;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.5))), url("5.jpg") repeat 0 0;
+    background-size: 100%;
+    animation: mymove 30s infinite;
+    overflow-x: visible;
+    overflow-y: hidden;
+    font-size: 1em;
+    font-family: "Century Gothic";
+}
+@keyframes mymove{
+    0%{
+        background-size: 100%;
+    }
+    50%{
+        background-size: 115%;
+    }
+    100:{
+        background-size: 100%;
+    }
+}
+/************************************************************************/
+/************************** WELCOME PAGE ********************************/
+.setTable{
+    height: 95%;
+}
+/*** add diner text ***/
+#instruction{
+    font-size: 2em;
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translateX(-55%);
+    color: white;
+    text-shadow: 0 0 10px #444, 0 0 20px #444, 0 0 30px #444, 0 0 40px #777, 0 0 70px #777, 0 0 80px #888, 0 0 100px #888, 0 0 150px #eee;
+}
+
+.dinercontainer, .dinercontainer2{
+	display: flex;
+	width: 90%;
+	height: 50%;
+	text-align:center;
+	margin: auto;
+}
+/*** 4 boxes ***/
+.seats{
+	background-color: white;
+	opacity:0.6;
+	border: 5px double #777;
+	max-width: 400px;
+	width: 40%;
+	height: 25%;
+	margin: auto;
+    padding-top: 5%;
+    color: black;
+	font-size: 2em;
+}
+/*** center button ***/
+.eventicon1{
+    display: block;
+    position: relative;
+    top: -59%;
+    margin: auto;
+}
+#plussign{
+    width: 55px;
+    height: 55px;
+    position:relative;
+    transform: translateY(-158%);
+    margin: auto;
+    text-align: center;
+    font-size: 44px;
+    font-weight: bold;
+    color: #b7ffbf;
+    text-shadow: 0 0 10px #111, 0 0 20px #333, 0 0 30px #555, 0 0 40px #777, 0 0 70px #999;
+    z-index: -1;
+}
+.eventicon2{
+    display: none;
+    position: relative;
+    top: -59%;
+    margin: auto;
+}
+#playsign{
+
+    width: 30px;
+    height: 30px;
+    position:relative;
+    transform: translateY(-250%);
+    margin: auto;
+    padding-left: 5px;
+    text-align: center;
+    border-radius: 100%;
+    z-index: -1;
+}
+#playsign:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 14.6px 0 14.6px 26.5px;
+    border-color: transparent transparent transparent rgb(234, 255, 236);
+}
+.outericon{
+    width: 110px;
+    height: 110px;
+    margin: 5px auto;
+    position:relative;
+    border-radius: 55px;
+    border: solid 1px #bafcd9;
+    background-Color:rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+.maskicon{
+    position: relative;
+    top: 27.5px;
+    width: 110px;
+    height: 55px;
+    overflow: hidden;
+	/* Firefox */
+	-moz-transition: all 0.6s ease;
+	/* WebKit */
+	-webkit-transition: all 0.6s ease;
+	/* Opera */
+	-o-transition: all 0.6s ease;
+	/* Standard */
+	transition: all 0.6s ease;
+}
+.outericon:hover .maskicon{
+    transform:rotate(270deg);
+    -webkit-transform:rotate(270deg); 
+    height: 110px;
+    top: 0;
+}
+.ring {
+    position: relative;
+    top:-27.5px;
+    width: 100px;
+    height: 100px;
+    border: solid 5px #ffffff;
+    border-radius: 60px;
+    
+	-webkit-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+.outericon:hover .ring{
+    top: 0px;
+    box-shadow: 0px 0px 10px rgb(77, 77, 77);
+}
+
+/*** pop up form ***/
+.enterdinernum{
+    display: none;  
+    position: absolute;  
+    top: 25%;  
+    left: 35%;  
+    width: 26%;  
+      
+    padding: 16px;  
+    border: 6px double #555;  
+    background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#f1fff2));
+    border-radius: 2.5%;
+    z-index:1002;  
+}
+/*
+.entername{
+    display: none;  
+    position: absolute;  
+    top: 25%;  
+    left: 31.3%;  
+    width: 33.3%;  
+    height: 50%;  
+    padding: 16px;  
+    border: 6px double #555;  
+    background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#f1fff2));
+    border-radius: 2.5%;
+    z-index:1002;  
+}   
+*/
+.enternummsg{
+    display: inline-block;
+    margin: 3% auto;
+    padding: 0 3%;
+    text-align: center;
+    color: black;
+    text-shadow: 0 0 10px #111;
+    font-size: 1em;
+    
+}
+.blackoverlay{  
+    display: none;  
+    position: absolute;  
+    top: 0%;  
+    left: 0%;  
+    width: 100%;  
+    height: 100%;  
+    background-color: rgba(0,0,0,0.5);
+    z-index:1001;  
+}  
+.nameform{
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+}
+.nameformsubmit{
+    display: block;
+    cursor: pointer;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+    margin: 3% auto 0 auto;
+    padding: 0 25%;
+    outline: none;
+    background: #64991e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#80bc31), to(#588e0f));   
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Century Gothic";
+}
+.nameformsubmit:hover {
+	text-decoration: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#436b0c), to(#538018));
+}
+.nameformsubmit:active {
+	position: relative;
+	top: 1px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#a9c08c), to(#436b0c));
+}
+/************************************************************************/
+.mainMenu{
+    
+    width:100%;
+    float:left;
+    border-radius: 1.5%;   
+    overflow: hidden;
+}
+/* left */
+#orderList{
+    float: left;
+    width: 20%;
+    height: 85%;
+    margin-left: 8%;
+    margin-right: 3%;
+    margin-top: 2%;
+    background-Color:rgba(255,255,255,0.5);
+}
+/* middle */
+#category{
+    width: 29%;
+    height: 85%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 2%;
+    background-Color:rgba(255,255,255,0.5);
+}
+/* right */
+#description{
+    float: right;
+    width: 23%;
+    margin-left: 3%;
+    margin-right: 8%;
+    margin-top: 2%;
+    height: 85%;
+    background-Color:rgba(255,255,255,0.5);
+}
+/*************************************************************************/
+
+/*************************************************************************
+********************************** LEFT **********************************
+**************************************************************************/
+
+.left-top{
+    display: block;
+    text-align: center;
+    height: 22px;
+    padding-bottom: 5.35%;
+    padding-top: 5.35%;
+    font-size: 1.2em;
+    overflow: hidden;
+}
+.orderAndAddButton{
+    content: '';
+    display: inline-block;
+    float: left;
+    width: 50%;
+    vertical-align: middle;
+}
+.addDinerButton{
+    display: block;
+    cursor: pointer;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(255,255,255,0.6);
+    font-family: "Century Gothic";
+    margin: 0 auto;
+}
+.addDinerButton:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#bbb), to(#999));
+}
+.addDinerButton:active{
+    position: relative;
+	top: 1px;
+}
+.diners{
+    display: block;
+    height:80%;
+    overflow-y: scroll;
+    border-bottom: 1px solid dimgray;
+}
+.diners::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: rgba(255,255,255,0);
+}
+.diners::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #f5f5f5;
+}
+.diners::-webkit-scrollbar-thumb
+{
+    width: calc(0.5em - 2px);
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #777;
+}
+/*************************** Customers' Box **************************/
+.diner{
+    display: block;
+    margin-top: 1%;
+    margin-bottom: 8%;
+    margin-left: 8%;
+    margin-right: 10%;
+    height: 30%;
+    padding: 4%;
+    -webkit-box-shadow: 0px 0px 5px 3px #999; 
+    box-shadow: 0px 0px 5px 3px #999; 
+    text-align: center;
+    border-radius: 1.5%;
+}
+.dinerName{
+    display: block;
+}
+.dinerOrder{
+    float: left;
+    width: 100%;
+    height: 71%;
+    margin-top: 2%;
+    margin-bottom: 2.5%;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    resize: none;
+    overflow-y: scroll;
+}
+.dinerOrder::-webkit-scrollbar {
+    width: 0.3em;
+    background-color: rgba(255,255,255,0);
+}
+.dinerOrder::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #f5f5f5;
+}
+.dinerOrder::-webkit-scrollbar-thumb
+{
+    width: calc(0.3em - 2px);
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #999;
+}
+
+.editRemoveButton{
+    display: inline-block;
+    float:left;
+    width: 50%;
+}
+.editButton{
+    display: block;
+    cursor: pointer;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 0 15%;
+    outline: none;
+    background-color: rgba(255,255,255,0.6);
+    font-family: "Century Gothic";
+}
+.editButton:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd));
+}
+.editButton:active{
+    position: relative;
+	top: 1px;
+}
+.removeButton{
+    display: block;
+    cursor: pointer;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 0 5 0 15%;
+    outline: none;
+    background: url(removeicon.png) no-repeat left center;
+    background-size: 19%; 
+    background-position: 2%;
+    background-color: rgba(255,255,255,0.6);
+    font-family: "Century Gothic";
+}
+.removeButton:hover{
+    background: url(removeicon.png) no-repeat left center;
+    background-size: 19%; 
+    background-position: 2%;
+}
+.removeButton:active{
+    position: relative;
+	top: 1px;
+}
+
+.left-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.menuitemordered{
+    display: block;
+    width: 100%;
+    
+    cursor: pointer;
+    border: 1px solid dodgerblue;
+    border-radius: 5px;
+    margin: 0 auto;
+    
+    outline: none;
+    background-color: rgba(255,255,255,0.6);
+    font-family: "Century Gothic";
+}
+.menuitemordered:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd));
+}
+.menuitemordered:active{
+    position: relative;
+	top: 1px;
+}
+/***************************** Left Bottom **************************/
+.placeOrderButton{
+    display: block;
+    cursor: pointer;
+    width: 80%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin: 5% 0;
+    border-radius: 5px;
+    outline: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#aaa), to(#777));
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    border: solid 1px #888;
+    
+    font-size: 1.5em;
+    font-family: "Century Gothic";
+}
+.placeOrderButton:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#888), to(#999));
+}
+.placeOrderButton:active {
+	position: relative;
+	top: 1px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#999), to(#777));
+}
+
+/*************************************************************************
+******************************** MIDDLE **********************************
+**************************************************************************/
+
+.separateline{
+    border: 0;
+    height: 1.5px;
+    background-image: linear-gradient(to right, #999, #444, #999);
+    margin: 0;
+}
+
+.navigation {
+}
+
+.maincat{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-align: center;
+    
+}
+
+.submenu{
+    list-style: none;
+    display: none;
+    padding: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    max-height: 0;
+
+}
+.maincat a {
+    display: block;
+    background-color: #aaa;
+    text-decoration: none;
+    padding: 10px;
+    color: #000;
+}
+
+.maincat a:hover {
+    background-color: #C5C5C5;
+}
+
+.maincat li:active .submenu {
+    display: block;
+    max-height: 200px;
+
+}
+
+.maincat li .submenu{
+    display: none;
+    max-height: 200px;
+}
+
+.submenu:hover {
+    display: block;
+    max-height: 200px;
+    background-color: #666;
+}
+
+.submenu ul{
+        overflow: hidden;
+        height: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+}
+
+.submenu a {
+    background-color: #888;
+    border-bottom: 1px dashed #444;
+}
+.submenuB{
+    display: block;
+    width: 100%;
+    background-color: #aaa;
+    padding: 10px;
+    color: #000;
+    background-color: #888;
+    border: 1px dashed #444;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    font-family: "Century Gothic";
+}
+.submenuB:hover {
+    background-color: #C5C5C5;
+}
+/**************************************************************************
+********************************* RIGHT ***********************************
+***************************************************************************/
+
+/* right top */
+.largeImage{
+    display: inline-block;
+    width: 100%;
+    height: 58.8%;
+    margin: auto;
+    vertical-align: middle;
+    text-align:center;
+}
+/* right top content */
+#bigImage{
+    display:block; 
+    height:80%; 
+    width: 90%; 
+    padding-top:5%; 
+    padding-bottom:5%; 
+    margin-top: 5%;
+
+    align-items: center;
+    vertical-align: middle;
+}
+
+/* right middle */
+.textheader{
+    width: 90%;
+
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    text-align: center;
+    font-weight: bold;
+    border-top: 1.5px solid dimgray;    
+
+}
+/* right middle */
+.textdescription{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-size: 0.8em;
+    padding-bottom: 1.5%;
+    margin-bottom: 0.5em;
+
+}
+/* right drop down menu 1 */
+.sidespart{   
+    width: 80%;
+    height: 3.2%;
+    margin: auto;
+    padding:2%;
+    border-top: 1px solid dimgray;
+    
+}
+.sides{
+    display: inline-block;
+    float: left;
+    width: 30%;
+    margin-left: 9%;
+}
+/**************************SIDES DD********************************/
+.sides-dropdown {
+    /* Size and position */
+    position: relative;
+    width: 170%;
+    margin: 0 auto;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-left: 8%;
+
+    /* Styles */
+    background: white;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+    
+    /* Font settings */
+    font-weight: bold;
+    color:#999;
+    font-size: 0.85em;
+    font-family: "Century Gothic";
+    white-space: nowrap;
+}
+.sides-dropdown:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #999 transparent;
+}
+.sides-dropdown .dropdown {
+  /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    /* Styles */
+    background: white;
+    border-radius: inherit;
+    border: 1px solid rgba(0,0,0,0.17);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-weight: normal;
+    transition: all 0.1s ease-in;
+    list-style: none;
+    font-size: 0.8em;
+    padding: 0;
+    z-index: 999;
+
+    /* Hiding */
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sides-dropdown .dropdown li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #999;
+    border-bottom: 1px solid #e6e8ea;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,1);
+    transition: all 0.1s ease-out;
+}
+
+.sides-dropdown .dropdown li:first-of-type a {
+    border-radius: 7px 7px 0 0;
+}
+
+.sides-dropdown .dropdown li:last-of-type a {
+    border-radius: 0 0 7px 7px;
+    border: none;
+}
+
+/* Hover state */
+
+.sides-dropdown .dropdown li:hover a {
+    background: #f3f8f8;
+}
+.sides-dropdown .dropdown:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 12.8px;
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-color: #fff transparent;    
+}
+
+.sides-dropdown.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+/************************* EXTRA DD***************************/
+
+.extrapart{   
+    width: 80%;
+    height: 3.2%;
+    margin: auto;
+    padding:2%;
+    border-top: 1px solid dimgray;
+    border-bottom: 1px solid dimgray;
+}
+.extra{
+    display: inline-block;
+    float: left;
+    width: 30%;
+    margin-left: 9%;
+}
+/************************ RIGHT BOTTOM *************************/
+.right-bottom{
+    width: 100%;
+    justify-content: center;
+    margin: 4% 0;  
+    border-top: 2px solid dimgray;
+}
+.priceAndOrder{
+    width: 42%;
+    display: inline-block;
+    float: left;
+}
+.price{
+    display: flex;
+/** vertical-align: middle;  **** not working *****/
+    justify-content: center;   
+    margin: 10% 0;
+    font-size: 1.4em;
+}
+.orderButton{
+    
+    display: inline-block;
+    margin: 5% 5%;
+    padding: 5.5% 35%;
+	outline: none;
+	cursor: pointer;
+
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    font-size: 1.5em;
+    font-family: "Century Gothic";
+    border-radius: 0.5em;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);    
+    
+    color: #e8f0de;
+    border: solid 1px #538312;
+    background: #64991e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));   
+}
+.orderButton:hover {
+	text-decoration: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#436b0c), to(#538018));
+}
+.orderButton:active {
+	position: relative;
+	top: 1px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#a9c08c), to(#436b0c));
+}
+.forwhom{
+    display: none;
+    position: absolute;
+    top:72%;
+    left: 78.8%;
+    width: 12%;
+
+    /* Styles */
+    background: white;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    outline: none;
+    
+    /* Font settings */
+    font-weight: bold;
+    color:#999;
+    font-size: 0.85em;
+    font-family: "Century Gothic";
+    white-space: nowrap;
+}
+.forwho{
+    display: block;
+    width: 100%;
+    padding: 8px auto;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    font-family: "Century Gothic";
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);
+    cursor: pointer;
+}
+.forwho:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd));
+}
+.forwho:active{
+    position: relative;
+	top: 1px;
+}
+/********************************************************************************
+************************************ TOP ****************************************
+*********************************************************************************/
+
+.warp{
+    height: 9%;
+}
+.top{
+    width:32%;
+    float:left;
+    display: inline;
+    height: 5%;
+    margin: 1% 0;
+}
+.search{
+    display: none;
+    width: 31%;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0);
+    background-image: url('searchico.png');
+    background-position: 97%;
+    background-size: 11%; 
+    background-repeat: no-repeat;
+    margin-left: 42%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    padding-left: .5em;
+    outline: none;
+    
+    text-align: left;
+    color: white;
+    font-size: 1em;
+    font-family: "Century Gothic";
+    transition: width 0.2s ease-in-out;
+}
+.search::-webkit-input-placeholder {
+    color:white;
+    font-family: "Century Gothic";
+}
+.search:focus{
+    background: white;
+    color: #999;
+    background-image: url('searchicon.png');
+    background-position: 97%;
+    background-size: 11%; 
+    background-repeat: no-repeat;
+    border: 2px solid #999;
+}
+
+.Rheader{
+    width: 100%;
+    font-size: 1.8em;
+    color: white;
+    text-shadow: 0 0 10px #111, 0 0 20px #444;
+    text-align: center;
+    white-space:nowrap;
+    margin-top:0.15em;
+    margin-bottom:0.2em;
+    overflow-x: hidden;
+}
+
+.assistButton{
+    position: relative;
+    width:35%;
+    float: right;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 33%;
+    margin-bottom: 1%;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    text-align: center;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Century Gothic";
+    color:white;
+    background-color: #999;
+    white-space: nowrap;
+
+}
+.assistButton:hover{
+    background: #444;
+}
+.assistButton:focus{
+    outline: none;
+}
+.assistButton:after{
+    opacity: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    top: -25%;
+    left: -10%;
+    right: -10%;
+    bottom: -25%;
+    background-color: #444;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transition: 0.5s;
+}
+.assistButton:active:after{
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0s;
+    background: #f7f7f7;
+}
+.assistButton.clicked{
+    background-color: rgb(160, 37, 37) !important;
+    border-color: dimgray;
+}
